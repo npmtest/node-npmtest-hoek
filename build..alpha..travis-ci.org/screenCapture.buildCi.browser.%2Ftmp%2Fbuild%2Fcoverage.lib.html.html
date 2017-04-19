@@ -1,7 +1,5 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <title>Code coverage report for node-npmtest-hoek/hoek/lib/escape.js</title>
+<html lang="en"><head>
+    <title>Code coverage report for node-npmtest-hoek/node_modules/hoek/lib/escape.js</title>
     <meta charset="utf-8">
     <style>
         body, html {
@@ -194,7 +192,7 @@
     <h1 style="font-weight: bold;">
         <a href="https://github.com/npmtest/node-npmtest-hoek">npmtest-hoek (v0.0.1)</a>
     </h1>
-    <h1>Code coverage report for <span class="entity">node-npmtest-hoek/hoek/lib/escape.js</span></h1>
+    <h1>Code coverage report for <span class="entity">node-npmtest-hoek/node_modules/hoek/lib/escape.js</span></h1>
     <h2>
         
         Statements: <span class="metric">29.79% <small>(14 / 47)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -210,11 +208,11 @@
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-hoek/hoek/lib/</a> &#187; escape.js</div>
+    <div class="path"><a href="../../../../index.html">All files</a> » <a href="index.html">node-npmtest-hoek/node_modules/hoek/lib/</a> » escape.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
-<tr><td class="line-count">1
+<tbody><tr><td class="line-count">1
 2
 3
 4
@@ -491,94 +489,94 @@
 const internals = {};
 &nbsp;
 &nbsp;
-exports.escapeJavaScript = <span class="fstat-no" title="function not covered" >function (input) {</span>
+exports.escapeJavaScript = <span class="fstat-no" title="function not covered">function (input) {</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if (!input) {</span>
-<span class="cstat-no" title="statement not covered" >        return '';</span>
+<span class="cstat-no" title="statement not covered">    if (!input) {</span>
+<span class="cstat-no" title="statement not covered">        return '';</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    let escaped = '';</span>
+<span class="cstat-no" title="statement not covered">    let escaped = '';</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    for (let i = 0; i &lt; input.length; ++i) {</span>
+<span class="cstat-no" title="statement not covered">    for (let i = 0; i &lt; input.length; ++i) {</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        const charCode = input.charCodeAt(i);</span>
+<span class="cstat-no" title="statement not covered">        const charCode = input.charCodeAt(i);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        if (internals.isSafe(charCode)) {</span>
-<span class="cstat-no" title="statement not covered" >            escaped += input[i];</span>
+<span class="cstat-no" title="statement not covered">        if (internals.isSafe(charCode)) {</span>
+<span class="cstat-no" title="statement not covered">            escaped += input[i];</span>
         }
         else {
-<span class="cstat-no" title="statement not covered" >            escaped += internals.escapeJavaScriptChar(charCode);</span>
+<span class="cstat-no" title="statement not covered">            escaped += internals.escapeJavaScriptChar(charCode);</span>
         }
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    return escaped;</span>
+<span class="cstat-no" title="statement not covered">    return escaped;</span>
 };
 &nbsp;
 &nbsp;
-exports.escapeHtml = <span class="fstat-no" title="function not covered" >function (input) {</span>
+exports.escapeHtml = <span class="fstat-no" title="function not covered">function (input) {</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if (!input) {</span>
-<span class="cstat-no" title="statement not covered" >        return '';</span>
+<span class="cstat-no" title="statement not covered">    if (!input) {</span>
+<span class="cstat-no" title="statement not covered">        return '';</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    let escaped = '';</span>
+<span class="cstat-no" title="statement not covered">    let escaped = '';</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    for (let i = 0; i &lt; input.length; ++i) {</span>
+<span class="cstat-no" title="statement not covered">    for (let i = 0; i &lt; input.length; ++i) {</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        const charCode = input.charCodeAt(i);</span>
+<span class="cstat-no" title="statement not covered">        const charCode = input.charCodeAt(i);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        if (internals.isSafe(charCode)) {</span>
-<span class="cstat-no" title="statement not covered" >            escaped += input[i];</span>
+<span class="cstat-no" title="statement not covered">        if (internals.isSafe(charCode)) {</span>
+<span class="cstat-no" title="statement not covered">            escaped += input[i];</span>
         }
         else {
-<span class="cstat-no" title="statement not covered" >            escaped += internals.escapeHtmlChar(charCode);</span>
+<span class="cstat-no" title="statement not covered">            escaped += internals.escapeHtmlChar(charCode);</span>
         }
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    return escaped;</span>
+<span class="cstat-no" title="statement not covered">    return escaped;</span>
 };
 &nbsp;
 &nbsp;
-internals.escapeJavaScriptChar = <span class="fstat-no" title="function not covered" >function (charCode) {</span>
+internals.escapeJavaScriptChar = <span class="fstat-no" title="function not covered">function (charCode) {</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if (charCode &gt;= 256) {</span>
-<span class="cstat-no" title="statement not covered" >        return '\\u' + internals.padLeft('' + charCode, 4);</span>
+<span class="cstat-no" title="statement not covered">    if (charCode &gt;= 256) {</span>
+<span class="cstat-no" title="statement not covered">        return '\\u' + internals.padLeft('' + charCode, 4);</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    const hexValue = new Buffer(String.fromCharCode(charCode), 'ascii').toString('hex');</span>
-<span class="cstat-no" title="statement not covered" >    return '\\x' + internals.padLeft(hexValue, 2);</span>
+<span class="cstat-no" title="statement not covered">    const hexValue = new Buffer(String.fromCharCode(charCode), 'ascii').toString('hex');</span>
+<span class="cstat-no" title="statement not covered">    return '\\x' + internals.padLeft(hexValue, 2);</span>
 };
 &nbsp;
 &nbsp;
-internals.escapeHtmlChar = <span class="fstat-no" title="function not covered" >function (charCode) {</span>
+internals.escapeHtmlChar = <span class="fstat-no" title="function not covered">function (charCode) {</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    const namedEscape = internals.namedHtml[charCode];</span>
-<span class="cstat-no" title="statement not covered" >    if (typeof namedEscape !== 'undefined') {</span>
-<span class="cstat-no" title="statement not covered" >        return namedEscape;</span>
+<span class="cstat-no" title="statement not covered">    const namedEscape = internals.namedHtml[charCode];</span>
+<span class="cstat-no" title="statement not covered">    if (typeof namedEscape !== 'undefined') {</span>
+<span class="cstat-no" title="statement not covered">        return namedEscape;</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if (charCode &gt;= 256) {</span>
-<span class="cstat-no" title="statement not covered" >        return '&amp;#' + charCode + ';';</span>
+<span class="cstat-no" title="statement not covered">    if (charCode &gt;= 256) {</span>
+<span class="cstat-no" title="statement not covered">        return '&amp;#' + charCode + ';';</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    const hexValue = new Buffer(String.fromCharCode(charCode), 'ascii').toString('hex');</span>
-<span class="cstat-no" title="statement not covered" >    return '&amp;#x' + internals.padLeft(hexValue, 2) + ';';</span>
+<span class="cstat-no" title="statement not covered">    const hexValue = new Buffer(String.fromCharCode(charCode), 'ascii').toString('hex');</span>
+<span class="cstat-no" title="statement not covered">    return '&amp;#x' + internals.padLeft(hexValue, 2) + ';';</span>
 };
 &nbsp;
 &nbsp;
-internals.padLeft = <span class="fstat-no" title="function not covered" >function (str, len) {</span>
+internals.padLeft = <span class="fstat-no" title="function not covered">function (str, len) {</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    while (str.length &lt; len) {</span>
-<span class="cstat-no" title="statement not covered" >        str = '0' + str;</span>
+<span class="cstat-no" title="statement not covered">    while (str.length &lt; len) {</span>
+<span class="cstat-no" title="statement not covered">        str = '0' + str;</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    return str;</span>
+<span class="cstat-no" title="statement not covered">    return str;</span>
 };
 &nbsp;
 &nbsp;
-internals.isSafe = <span class="fstat-no" title="function not covered" >function (charCode) {</span>
+internals.isSafe = <span class="fstat-no" title="function not covered">function (charCode) {</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    return (typeof internals.safeCharCodes[charCode] !== 'undefined');</span>
+<span class="cstat-no" title="statement not covered">    return (typeof internals.safeCharCodes[charCode] !== 'undefined');</span>
 };
 &nbsp;
 &nbsp;
@@ -620,10 +618,11 @@ internals.safeCharCodes = (function () {
 }());
 &nbsp;
 &nbsp;</pre></td></tr>
-</table></pre>
+</tbody></table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 11 2017 19:12:27 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Wed Apr 19 2017 08:07:27 GMT+0000 (UTC)</div>
 </div>
-</body>
-</html>
+
+
+</body></html>
